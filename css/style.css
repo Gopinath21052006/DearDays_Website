@@ -82,9 +82,7 @@ nav ul a:hover::after{width:100%}
 .stack .phone:nth-child(1){transform:translateX(-46%) rotate(-7deg)}.stack .phone:nth-child(2){transform:translateX(30%) rotate(5deg);top:50px}
 @media(max-width:520px){.stack .phone{width:56vw}.stack .phone:nth-child(1){transform:translateX(-34%) rotate(-6deg)}.stack .phone:nth-child(2){transform:translateX(18%) rotate(5deg)}.stack{height:480px}}
 /* prompts */
-.q{padding:30px;max-width:520px;position:relative;margin-bottom:34px}
-.q:nth-child(2){margin-left:50px;transform:rotate(1.4deg)}.q img{border-radius:12px;margin-top:16px}
-@media(max-width:520px){.q:nth-child(2){margin-left:0}}
+@media(max-width:820px){.center .float{position:relative!important;top:auto!important;right:auto!important;margin:20px auto 0!important;transform:none!important}}
 /* privacy */
 .priv{background:var(--parch)}
 .grid6{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:46px}

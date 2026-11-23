@@ -138,10 +138,8 @@ mm.add('(min-width:821px)',function(){
  gsap.to('.stage .art',{yPercent:-8,ease:'none',scrollTrigger:{trigger:'.hero',scrub:true,start:'top top',end:'bottom top'}});
  gsap.to('.pol',{y:-60,ease:'none',scrollTrigger:{trigger:'.hero',scrub:true,start:'top top',end:'bottom top'}});
  gsap.utils.toArray('.stack').forEach(function(s){gsap.from(s.querySelectorAll('.phone'),{x:0,rotation:0,y:0,ease:'none',scrollTrigger:{trigger:s,start:'top 85%',end:'top 30%',scrub:.6}})});
- gsap.from('.q',{rotationY:-80,opacity:0,transformPerspective:900,transformOrigin:'left center',duration:1.1,ease:'power3.out',scrollTrigger:{trigger:'.q',start:'top 85%'}});
 });
 mm.add('(max-width:820px)',function(){
  gsap.from('.stack .phone',{y:50,opacity:0,duration:.8,stagger:.15,ease:'power3.out',scrollTrigger:{trigger:'.stack',start:'top 85%'}});
- gsap.from('.q',{y:40,opacity:0,duration:.8,scrollTrigger:{trigger:'.q',start:'top 88%'}});
 });
 })();
