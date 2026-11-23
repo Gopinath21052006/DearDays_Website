@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>DearDays — Aesthetic Scrapbook Journal & Digital Memory Collection</title>
+<meta name="description" content="DearDays is a personal offline-first memory journal for your voices, thoughts and everyday stories.">
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/jpeg" href="assets/images/cassette-illustration.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=Lora:wght@400;500&family=Caveat:wght@600&family=Special+Elite&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css"></head><body>
+<nav aria-label="Main"><a class="logo" href="#home">DearDays</a>
+<ul id="menu"><li><a href="#home">Home</a></li><li><a href="#experience">Experience</a></li><li><a href="#features">Features</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#download">Download</a></li><li><a class="btn p" style="padding:6px 18px;min-height:auto;font-size:0.88rem;color:var(--cream);margin-left:8px" href="deardays-v1.0.0-release.apk" download="deardays-v1.0.0-release.apk">Download APK</a></li></ul>
+<button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg></button></nav>
+<main>
+<section class="hero" id="home"><div class="wrap row">
+<div><span class="eyebrow h">DearDays · Scrapbook Journal</span><h1 class="h">Your memories deserve a place to stay.</h1><p class="lead h">A little place for your thoughts, voices and moments worth keeping.</p>
+<div class="btns h"><a class="btn p" href="deardays-v1.0.0-release.apk" download="deardays-v1.0.0-release.apk">Download Release APK</a><a class="btn" href="#experience">Explore the Experience</a></div></div>
+<div class="stage"><div style="position:absolute;left:-4%;top:6%;width:min(430px,78vw);z-index:1" class="floaty"><img class="art" style="position:static;width:100%" src="assets/images/cassette-illustration.jpg" alt="Illustration of a vintage cassette wrapped in golden ribbon and roses"><span class="reel" style="left:30.5%;top:44.5%"></span><span class="reel" style="left:54%;top:44.5%"></span></div>
+<div class="phone"><img src="assets/images/home.jpg" alt="DearDays home screen with Record Memory button and Memory Prompts" width="520" height="1160"></div>
+<div class="pol floaty" style="right:0;top:40px;transform:rotate(6deg)"><img src="assets/images/calendar.jpg" alt=""><span>November</span></div>
+<div class="pol floaty" style="left:4%;bottom:20px;transform:rotate(-7deg)"><img src="assets/images/all-memories.jpg" alt=""><span>all my days</span></div>
+<span class="leaf floaty" style="right:6%;bottom:60px" aria-hidden="true">🌿</span></div></div></section>
+
+<section id="experience"><div class="wrap"><span class="eyebrow">The Experience</span><h2 class="rv">Three little ways to keep your memories.</h2>
+<div class="three">
+<div class="card rv"><div class="tape"></div><div class="num">01</div><h3>Voice Memories</h3><p>Capture the moments you want to hear again.</p><img class="full" src="assets/images/recording.jpg" alt="Voice recording screen"></div>
+<div class="card rv"><div class="tape"></div><div class="num">02</div><h3>Written Memories</h3><p>Give your thoughts a place to belong.</p><img class="full" src="assets/images/home.jpg" alt="DearDays home screen with Write a Memory button"></div>
+<div class="card rv"><div class="tape"></div><div class="num">03</div><h3>Memory Collection</h3><p>Keep every little moment together.</p><img class="full" src="assets/images/all-memories.jpg" alt="All Memories screen"></div></div></div></section>
+
+<section class="dark" id="features"><div class="wrap row"><div><span class="eyebrow">Voice Memories</span><h2 class="rv">Some moments are better heard again.</h2>
+<p class="lead">Press record and speak freely. Watch your voice become a glowing golden wave, then play it back on a vintage cassette.</p>
+<div class="oscilloscope-scope" id="oscilloscopeBox" aria-hidden="true" title="Real-time Hann-window oscilloscope visualizer">
+  <canvas id="oscilloscopeCanvas"></canvas>
+</div>
+<ul class="tags"><li>Real-time waveform</li><li>Cassette player</li><li>0.75× – 2× speed</li><li>Audio bookmarks</li><li>10s skip</li></ul></div>
+<div class="duo rv"><div class="phone"><img src="assets/images/recording.jpg" alt="Recording screen with golden waveform, pause and stop"></div><div class="phone"><img src="assets/images/cassette-player.jpg" alt="DearDays memory cassette player with bookmarks"></div></div></div></section>
+
+<section><div class="wrap row rev"><div class="card paper rv"><div class="tape"></div>
+<p>Dear days, today felt slow and soft…</p><p>I want to remember how it felt.</p><span class="badge">😌 Peaceful</span><img class="full" src="assets/images/home.jpg" alt="DearDays home screen with Write a Memory button"></div>
+<div><span class="eyebrow">Written Diary</span><h2 class="rv">Write what your heart wants to remember.</h2><p class="lead">One tap from the home screen opens a quiet page just for your words.</p>
+<ul class="ticks"><li>Lined parchment writing space</li><li>Mood badges for how the day felt</li><li>Pick the date it belongs to</li><li>Drafts are kept safe until you return</li></ul></div></div></section>
+
+<section style="background:var(--parch)"><div class="wrap row"><div><span class="eyebrow">Memory Calendar</span><h2 class="rv">Every date holds a story.</h2><p class="lead">A monthly calendar marks the days you recorded, wrote, or felt something worth keeping, with a monthly digest on its own mini cassette.</p>
+<div class="legend"><span class="v">Voice</span><span class="w">Written</span><span class="f">Favourite</span></div></div>
+<div class="stack rv" style="height:600px"><div class="phone"><img src="assets/images/calendar.jpg" alt="Monthly calendar with voice and written indicators and a November digest"></div><div class="phone"><img src="assets/images/home.jpg" alt="Home screen"></div>
+<div class="card float floaty" style="left:0;bottom:30px;transform:rotate(-4deg)">November Digest</div></div></div></section>
+
+<section><div class="wrap row rev"><div class="stack rv"><div class="phone"><img src="assets/images/all-memories.jpg" alt="All Memories list with waveform cards"></div><div class="phone"><img src="assets/images/cassette-player.jpg" alt="Cassette playback"></div></div>
+<div><span class="eyebrow">All Memories</span><h2 class="rv">A collection of moments, all in one place.</h2><p class="lead">Scrapbook cards with waveform previews and written excerpts. Heart your favourites, search, or filter by Voice, Written and more.</p></div></div></section>
+
+<section style="background:var(--parch)"><div class="wrap row"><div><span class="eyebrow">Daily Memory Prompts</span><h2 class="rv">Every day begins with a little story.</h2><p class="lead">Not sure what to say? 60+ gentle questions are one tap away.</p>
+<ul class="ticks"><li>Surprise Me for a random question</li><li>Save favourite prompts</li><li>Record with a prompt</li><li>Write with a prompt</li></ul></div>
+<div><div class="card q rv"><div class="tape"></div><h3>Memory Prompts</h3><p>Not sure what to say? Tap here for fun questions and ideas.</p><img class="full" src="assets/images/home.jpg" alt="DearDays home screen with Memory Prompts"></div></div></div></section>
+
+<section class="priv" id="privacy"><div class="wrap"><span class="eyebrow">Privacy &amp; Personalisation</span><h2 class="rv">Your memories. Your little world.</h2>
+<div class="row" style="margin-top:36px"><div class="grid6" style="grid-template-columns:1fr 1fr;margin:0">
+<div class="rv"><h3>100% offline</h3><p>Nothing leaves your phone.</p></div><div class="rv"><h3>Local SQLite</h3><p>Stored on your device.</p></div><div class="rv"><h3>Biometric lock</h3><p>Only you can open it.</p></div><div class="rv"><h3>Five themes</h3><p>Make it feel like yours.</p></div><div class="rv"><h3>Personal</h3><p>Your name, your formats.</p></div><div class="rv"><h3>JSON backup</h3><p>Take your memories with you.</p></div></div>
+<div class="center rv"><div class="phone"><img src="assets/images/settings.jpg" alt="DearDays settings with appearance, date format and recording options"></div></div></div></div></section>
+
+<section class="cta" id="download"><div class="wrap"><img class="art floaty" src="assets/images/cassette-illustration.jpg" alt="Vintage cassette with roses and golden ribbon"><h2 class="rv">One day, these little moments will mean everything.</h2><p>Start collecting the stories that make your life yours.</p>
+<div class="btns" style="justify-content:center"><a class="btn p" href="deardays-v1.0.0-release.apk" download="deardays-v1.0.0-release.apk">Download Release APK · 75.4 MB</a></div>
+<p style="margin-top:14px;font-size:0.88rem;color:#8a7468">Android 7.0+ (API 24+) · v1.0.0 · 100% Offline &amp; Private</p></div></section></main>
+<footer><div class="wrap"><div class="f"><div><a class="logo" href="#home">DearDays</a><p style="max-width:32ch">Your days, your memories. A private journal for voices and words.</p></div>
+<ul><li><a href="#home">Home</a></li><li><a href="#experience">Experience</a></li><li><a href="#features">Features</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#download">Download</a></li></ul></div><small>© 2026 DearDays. Every voice has a memory. Every day has a story.</small></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script src="js/main.js"></script></body></html>
