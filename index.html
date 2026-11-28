@@ -14,7 +14,7 @@
 <main>
 <section class="hero" id="home"><div class="wrap row">
 <div><span class="eyebrow h">DearDays · Scrapbook Journal</span><h1 class="h">Your memories deserve a place to stay.</h1><p class="lead h">A little place for your thoughts, voices and moments worth keeping.</p>
-<div class="btns h"><a class="btn p" href="deardays-v1.0.0-release.apk" download="deardays-v1.0.0-release.apk">Download Android (.apk)</a><a class="btn p" href="DearDays-iOS-Release.ipa" download="DearDays-iOS-Release.ipa" style="background:var(--deep);border-color:var(--deep)">Download iOS (.ipa)</a><a class="btn" href="#experience">Explore Experience</a></div></div>
+<div class="btns h"><a class="btn p" href="deardays-v1.0.0-release.apk" download="deardays-v1.0.0-release.apk">Download Android (.apk)</a><a class="btn p" id="heroIosBtn" href="itms-services://?action=download-manifest&amp;url=https://gopinath21052006.github.io/DearDays_Website/manifest.plist" style="background:var(--deep);border-color:var(--deep)">Install DearDays (iOS)</a><a class="btn" href="#experience">Explore Experience</a></div></div>
 <div class="stage"><div style="position:absolute;left:-4%;top:6%;width:min(430px,78vw);z-index:1" class="floaty"><img class="art" style="position:static;width:100%" src="assets/images/cassette-illustration.jpg" alt="Illustration of a vintage cassette wrapped in golden ribbon and roses"><span class="reel" style="left:30.5%;top:44.5%"></span><span class="reel" style="left:54%;top:44.5%"></span></div>
 <div class="phone"><img src="assets/images/home.jpg" alt="DearDays home screen with Record Memory button and Memory Prompts" width="520" height="1160"></div>
 <div class="pol floaty" style="right:0;top:40px;transform:rotate(6deg)"><img src="assets/images/calendar.jpg" alt=""><span>November</span></div>
@@ -59,8 +59,45 @@
 <div class="center rv"><div class="phone"><img src="assets/images/settings.jpg" alt="DearDays settings with appearance, date format and recording options"></div></div></div></div></section>
 
 <section class="cta" id="download"><div class="wrap"><img class="art floaty" src="assets/images/cassette-illustration.jpg" alt="Vintage cassette with roses and golden ribbon"><h2 class="rv">One day, these little moments will mean everything.</h2><p>Start collecting the stories that make your life yours.</p>
-<div class="btns" style="justify-content:center;gap:18px"><a class="btn p" href="deardays-v1.0.0-release.apk" download="deardays-v1.0.0-release.apk">Download for Android · 75.4 MB</a><a class="btn p" href="DearDays-iOS-Release.ipa" download="DearDays-iOS-Release.ipa" style="background:var(--deep);border-color:var(--deep)">Download for iOS (.ipa) · 52.7 MB</a></div>
-<p style="margin-top:16px;font-size:0.88rem;color:#8a7468">Available for Android 7.0+ &amp; iOS 14.0+ · v1.0.0 Release · 100% Offline &amp; Private</p></div></section></main>
+<div class="device-note" id="deviceNote">Detecting your device… Choose Android APK or iOS Safari OTA installation below.</div>
+<div class="btns" style="justify-content:center;gap:14px">
+<a class="btn p" id="androidDownloadBtn" href="deardays-v1.0.0-release.apk" download="deardays-v1.0.0-release.apk">Download for Android · 75.4 MB</a>
+<a class="btn p" id="otaInstallBtn" href="itms-services://?action=download-manifest&amp;url=https://gopinath21052006.github.io/DearDays_Website/manifest.plist" style="background:var(--deep);border-color:var(--deep)">Install DearDays (iOS Safari OTA)</a>
+<button type="button" class="btn" id="openIosGuideBtn">iOS Install Guide</button>
+</div>
+<div class="ios-alt">
+<div><strong>iOS Distribution &amp; Compatibility:</strong> <code>DearDays-iOS-Release.ipa</code> (52.7 MB, iOS). Direct Safari OTA installation requires an <strong>Ad Hoc signed build</strong> for registered iPhone UDIDs (or Enterprise signing). For public beta testing without device UDID registration, use <strong>TestFlight</strong>.</div>
+<div class="ios-alt-links">
+<a href="#iosModal" id="testflightInfoLink">TestFlight Beta (Configure App Store Connect URL)</a>
+<a href="DearDays-iOS-Release.ipa" download="DearDays-iOS-Release.ipa">Fallback: Download Raw .ipa (52.7 MB)</a>
+<a href="manifest.plist" target="_blank" rel="noopener">View manifest.plist</a>
+</div>
+</div>
+<p style="margin-top:16px;font-size:0.88rem;color:#8a7468">Android 7.0+ (v1.0.0 · 75.4 MB) &amp; iOS (52.7 MB) · 100% Offline &amp; Private</p></div></section></main>
+
+<div class="modal-backdrop" id="iosModal" role="dialog" aria-modal="true" aria-labelledby="iosModalTitle">
+<div class="modal-card">
+<div class="tape"></div>
+<button type="button" class="modal-close" id="closeIosGuideBtn" aria-label="Close installation guide">&times;</button>
+<span class="eyebrow" style="margin-bottom:6px">iPhone &amp; iPad Installation</span>
+<h3 id="iosModalTitle" style="margin-bottom:8px">How to Install DearDays on iOS</h3>
+<p style="font-size:.94rem;color:#6b5448;margin-bottom:10px">Direct Safari installation uses Apple's Over-The-Air (<code>itms-services://</code>) manifest workflow.</p>
+<ol class="ios-steps">
+<li><strong>Open DearDays in Safari</strong> on your iPhone or iPad (<code>https://gopinath21052006.github.io/DearDays_Website/</code>).</li>
+<li>Tap <strong>Install DearDays (iOS Safari OTA)</strong>.</li>
+<li>Tap <strong>Install</strong> when iOS prompts you to confirm.</li>
+<li>Return to your Home Screen and wait for DearDays to finish installing.</li>
+<li><strong>If using an Enterprise or Development profile:</strong> open <strong>Settings &rarr; General &rarr; VPN &amp; Device Management</strong> and trust the developer profile. <em>(Ad Hoc builds trust automatically for registered devices.)</em></li>
+</ol>
+<div class="ios-warn">
+<strong>Eligibility &amp; Signing Notice:</strong> Ad Hoc OTA installation only works if your iPhone's <strong>UDID</strong> is registered and the <code>.ipa</code> is signed with an Apple Distribution certificate. The current <code>DearDays-iOS-Release.ipa</code> in this repository is <strong>unsigned</strong>; until signed via Xcode / <code>flutter build ipa</code> or published to <strong>TestFlight</strong>, you can sideload the fallback <code>.ipa</code> using AltStore or Sideloadly.
+</div>
+<div class="btns" style="margin-top:20px;gap:10px">
+<a class="btn p" href="itms-services://?action=download-manifest&amp;url=https://gopinath21052006.github.io/DearDays_Website/manifest.plist" style="background:var(--deep);border-color:var(--deep)">Install DearDays (OTA)</a>
+<a class="btn" href="DearDays-iOS-Release.ipa" download="DearDays-iOS-Release.ipa">Fallback .ipa (52.7 MB)</a>
+</div>
+</div>
+</div>
 <footer><div class="wrap"><div class="f"><div><a class="logo" href="#home">DearDays</a><p style="max-width:32ch">Your days, your memories. A private journal for voices and words.</p></div>
 <ul><li><a href="#home">Home</a></li><li><a href="#experience">Experience</a></li><li><a href="#features">Features</a></li><li><a href="#privacy">Privacy</a></li><li><a href="#download">Download</a></li></ul></div><small>© 2026 DearDays. Every voice has a memory. Every day has a story.</small></div></footer>
 <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>

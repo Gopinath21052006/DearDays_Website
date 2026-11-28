@@ -105,3 +105,18 @@ footer small{display:block;margin-top:34px;opacity:.7}
 #veil{position:fixed;inset:0;z-index:100;background:var(--cream);display:flex;align-items:center;justify-content:center;font:italic 400 3rem 'IM Fell English';color:var(--mah)}
 .w{display:inline-block}
 nav ul a,.btn,.tags li,.legend span{font-family:"Special Elite",Georgia,serif;letter-spacing:.02em}.btn{font-weight:400}.grid6 h3,.three h3{font-weight:400}
+/* iOS OTA & Install Guide Modal */
+.device-note{max-width:620px;margin:18px auto 0;padding:14px 20px;background:#FBF7EE;border:1px solid rgba(184,139,69,.45);border-radius:16px;font-size:.93rem;color:var(--mah);text-align:left;line-height:1.55}
+.ios-alt{max-width:620px;margin:20px auto 0;padding:16px 20px;background:rgba(251,247,238,.72);border:1px dashed rgba(184,139,69,.55);border-radius:16px;font-size:.88rem;color:#6b5448}
+.ios-alt-links{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:10px}
+.ios-alt-links a{color:var(--mah);text-decoration:underline;text-underline-offset:3px;font-weight:500}
+.ios-alt-links a:hover{color:var(--gold)}
+.modal-backdrop{position:fixed;inset:0;z-index:120;background:rgba(31,21,16,.68);backdrop-filter:blur(4px);display:none;align-items:center;justify-content:center;padding:20px}
+.modal-backdrop.open{display:flex}
+.modal-card{position:relative;width:min(540px,100%);max-height:90vh;overflow-y:auto;background:var(--cream);color:var(--ink);border:1.5px solid var(--gold);border-radius:22px;padding:34px 28px 28px;box-shadow:0 24px 60px rgba(31,21,16,.5);text-align:left}
+.modal-close{position:absolute;top:14px;right:16px;background:none;border:1.5px solid rgba(87,58,45,.35);border-radius:99px;width:36px;height:36px;font-size:1.2rem;line-height:1;color:var(--mah);cursor:pointer}
+.modal-close:hover{background:var(--parch);border-color:var(--mah)}
+.ios-steps{margin:16px 0;padding-left:20px;display:grid;gap:10px;font-size:.96rem}
+.ios-steps li strong{color:var(--mah)}
+.ios-warn{margin-top:14px;padding:12px 14px;background:var(--parch);border-left:3px solid var(--gold);border-radius:8px;font-size:.88rem;color:#573A2D}
+@media(max-width:520px){.modal-card{padding:28px 20px 22px}}

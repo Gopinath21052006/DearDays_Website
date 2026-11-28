@@ -79,6 +79,50 @@ if(cvs&&box){
   drawOscilloscope();
 }
 
+/* Device detection & iOS Install Guide modal (no auto-redirect) */
+var ua=navigator.userAgent||'';
+var isIOS=/iPad|iPhone|iPod/.test(ua)||(navigator.platform==='MacIntel'&&navigator.maxTouchPoints>1);
+var isAndroid=/Android/i.test(ua);
+var isSafari=/Safari/i.test(ua)&&!/CriOS|FxiOS|EdgiOS|OPiOS|Chrome/i.test(ua);
+var note=document.getElementById('deviceNote');
+var modal=document.getElementById('iosModal');
+var openBtn=document.getElementById('openIosGuideBtn');
+var closeBtn=document.getElementById('closeIosGuideBtn');
+var heroIosBtn=document.getElementById('heroIosBtn');
+var otaBtn=document.getElementById('otaInstallBtn');
+var tfLink=document.getElementById('testflightInfoLink');
+
+function openIosModal(){if(modal)modal.classList.add('open')}
+function closeIosModal(){if(modal)modal.classList.remove('open')}
+
+if(note){
+ if(isIOS){
+  note.innerHTML=isSafari
+   ?'<strong>iPhone / iPad Safari detected:</strong> Tap <em>Install DearDays (iOS Safari OTA)</em> below to start Over-The-Air installation, or open the <em>iOS Install Guide</em> for Ad Hoc / TestFlight details.'
+   :'<strong>iPhone / iPad detected (non-Safari browser):</strong> For direct iOS OTA installation, please open this page in <strong>Safari</strong>, then tap <em>Install DearDays (iOS Safari OTA)</em>.';
+ }else if(isAndroid){
+  note.innerHTML='<strong>Android device detected:</strong> Tap <em>Download for Android · 75.4 MB</em> below to download <code>deardays-v1.0.0-release.apk</code> directly.';
+ }else{
+  note.innerHTML='<strong>Desktop browser detected:</strong> You can download the <strong>Android APK</strong> (75.4 MB) here. To install on an iPhone or iPad, open this page in <strong>iOS Safari</strong> or download the fallback <code>.ipa</code> (52.7 MB) for sideloading.';
+ }
+}
+
+if(openBtn)openBtn.addEventListener('click',openIosModal);
+if(closeBtn)closeBtn.addEventListener('click',closeIosModal);
+if(tfLink)tfLink.addEventListener('click',function(e){e.preventDefault();openIosModal()});
+if(modal)modal.addEventListener('click',function(e){if(e.target===modal)closeIosModal()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeIosModal()});
+
+[heroIosBtn,otaBtn].forEach(function(btn){
+ if(!btn)return;
+ btn.addEventListener('click',function(e){
+  if(!isIOS){
+   e.preventDefault();
+   openIosModal();
+  }
+ });
+});
+
 var rm=matchMedia('(prefers-reduced-motion:reduce)').matches;
 if(rm||!window.gsap){return}
 gsap.registerPlugin(ScrollTrigger);
